@@ -13,8 +13,7 @@ unsigned long getDataTimer = 0;
 
 //-------------------VARIABLES GLOBALES--------------------------
 int contconexion = 0;
-//int tiempoEnvio = 1 * 60 * 1000; // 1 min
-int tiempoEnvio =  10 * 1000; // 10 seg
+int tiempoEnvio = 5 * 60 * 1000; // 5 min
 
 const char *ssid = "Elorrieta_ethazi";
 const char *password = "123ETHAZI";
