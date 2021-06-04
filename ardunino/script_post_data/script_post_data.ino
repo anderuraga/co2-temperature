@@ -22,7 +22,7 @@ unsigned long previousMillis = 0;
 
 char host[48];
 String strhost = "10.0.21.15"; // ip del pc donde está la base de datos
-String strurl = "/tutorial/enviardatos.php";
+String strurl = "/co2temperatura/web/controlador/insertardatos.php";
 String chipid = "";
 
 //-------Función para Enviar Datos a la Base de Datos SQL--------

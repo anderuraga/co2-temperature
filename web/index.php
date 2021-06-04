@@ -1,12 +1,8 @@
 <?php
-	$cons_usuario="root";
-    $cons_contra="";
-    $cons_base_datos="tutorial";
-    $cons_equipo="localhost";
-	
-    // Create connection
-    $conn = mysqli_connect($cons_equipo,$cons_usuario,$cons_contra,$cons_base_datos);
-    
+
+    require_once("db/conectar.php");
+
+ 
 	$sql= "SELECT max(co2) 'maxco2', min(co2) 'minco2', avg(co2) 'avgco2', max(temp) 'maxtemp', min(temp) 'mintemp', avg(temp) 'avgtemp', date_format(fecha, '%Y-%m-%d'), CURRENT_DATE FROM tabla WHERE date_format(fecha, '%Y-%m-%d') = CURRENT_DATE GROUP BY date_format(fecha, '%Y-%m-%d');";
 	$sql2= "SELECT co2, temp FROM tabla ORDER BY id DESC LIMIT 1;";
 	
@@ -30,12 +26,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sensor Co2 & Temp</title>
 
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="resources/css/styles.css">
 
   </head>
   <body>
 	
-	<a href="mostrar.php">Ver todos los valores</a>
+	<a href="vista/mostrar.php">Ver todos los valores</a>
 		
 	<div class="container">
 		
@@ -69,7 +65,7 @@
 			<h3>Sensor XXXX<span>Aula 013</h3>
 			<h1><?php echo $row2['temp']?>º</h1>
 			<div class="tempback">
-				<img src="images/thermometer.svg" alt="termometro" class="thermometer">	
+				<img src="resources/images/thermometer.svg" alt="termometro" class="thermometer">	
 			</div>
 			<table>
 				<tr>
@@ -96,7 +92,9 @@
    
   </body>
 </html>
+
 <?php
 
-	mysqli_close($conn);
+	require_once("db/desconectar.php");
+	
 ?>
