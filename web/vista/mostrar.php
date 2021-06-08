@@ -44,6 +44,7 @@
   
 	<h3><span class="bg-secondary text-light p-1"><?php echo($resultado->num_rows)?></span> <?php echo($filtro)?></h3>
 	
+
 	<!-- filtro fechas -->
 		<form method="get" action="mostrar.php" class="form-inline mb-4 bg-light p-2" >
 			<div class="row">
@@ -63,10 +64,13 @@
 				</div>
 			</div>
 		</form>
+
+
+
 	
 	<div class="row">
 		<!-- tabla -->
-		<div class="col">
+		<div class="col bg-light p-2 mr-2">
 			<table id="myTable" class="table table-striped table-hover">
 			<caption>Datos Co2 - Aula X</caption>
 			<thead>
@@ -86,8 +90,25 @@
 					$labelsTemp = [];
 					$dataTemp = [];
 					$cont = 0;
+
+					$tempMax = -100;
+					$tempMin = 100;
+					$tempMedia = 0;
+
+					$co2Max = -100;
+					$co2Min = 100;
+					$co2Media = 0;
 					
 					while($row = mysqli_fetch_assoc($resultado)) {
+
+						// maximos, minimos y media
+						$tempMedia += $row['temp'];
+						$tempMin = ( $tempMin < $row['temp'] ) ? $tempMin : $row['temp'];
+						$tempMax = ( $tempMax > $row['temp'] ) ? $tempMax : $row['temp'];
+
+						$co2Media += $row['co2'];
+						$co2Min = ( $co2Min < $row['co2'] ) ? $co2Min : $row['co2'];
+						$co2Max = ( $co2Max > $row['co2'] ) ? $co2Max : $row['co2'];
 
 
 						// rellenar datos para graficos
@@ -105,6 +126,9 @@
 
 						$cont++;
 					}
+
+
+					$tempMedia = round( ($tempMedia/$cont) ,2);
 					
 				?>
 
@@ -112,8 +136,45 @@
 			</table>
 		</div>
 
-		<!-- grafico -->
-		<div class="col">
+		
+		<div class="col bg-light p-2">
+
+			<!-- tablas resumen -->		
+				<table class="table">
+					<thead>
+						<tr>				
+							<th scope="col">T. Max</th>
+							<th scope="col">T. Min</th>
+							<th scope="col">T. Media</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>					
+							<td><?php echo($tempMax)?></td>
+							<td><?php echo($tempMin)?></td>
+							<td><?php echo($tempMedia)?></td>
+						</tr>			
+					</tbody>
+				</table>
+
+				<table class="table">
+					<thead>
+						<tr>				
+							<th scope="col">Co2 Max</th>
+							<th scope="col">Co2. Min</th>
+							<th scope="col">Co2. Media</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>					
+							<td><?php echo($co2Max)?></td>
+							<td><?php echo($co2Min)?></td>
+							<td><?php echo($co2Media)?></td>
+						</tr>			
+					</tbody>
+				</table>
+
+			<!-- grafico -->
 			<canvas id="myChart" width="400" height="300"></canvas>		
 		</div>	
 
