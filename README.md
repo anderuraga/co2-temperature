@@ -33,12 +33,12 @@ Existe la posibilidad de filtrar por dos fechas.
 Existe un script para crear las bbdd y meter 5 registros de pruebas **/web/db/script.sql**
 Para cambiar las variables de conexion a la bbdd desde PHP hay que cambiar el siguiente fichero **/web/db/conectar.php**
 
-`
+ ```
   $dbname   = "sensores";
   $user     = "root";
   $password = "";
   $server   = "localhost";
-`  
+ ```  
 
 ## configuración Proyecto Web
 
@@ -50,19 +50,19 @@ Puedes probar que accede abriendo esta url en un navegador web [url pagina inici
 
 Antes de instalar el programa de arduino en el microprocesador, debemos cambiar una serie de variables:
 
-`
-// los datos se envian casa 5 min
-int tiempoEnvio = 5 * 60 * 1000; // 5 min
+ ```
+    // los datos se envian casa 5 min
+    int tiempoEnvio = 5 * 60 * 1000; // 5 min
 
-// nombre y contraseña de la red 
-const char *ssid = "Elorrieta_ethazi";
-const char *password = "123ETHAZI";
+    // nombre y contraseña de la red 
+    const char *ssid = "Elorrieta_ethazi";
+    const char *password = "123ETHAZI";
 
-// ip del pc donde está la base de datos
-String strhost = "10.0.21.15";                             
-String strurl = "/co2-temperature/web/controlador/insertardatos.php";
+    // ip del pc donde está la base de datos
+    String strhost = "10.0.21.15";                             
+    String strurl = "/co2-temperature/web/controlador/insertardatos.php";
 
-`
+ ```
 
 
 
