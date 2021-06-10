@@ -21,7 +21,7 @@ unsigned long previousMillis = 0;
 
 char host[48];
 String strhost = "10.0.21.15"; // ip del pc donde está la base de datos
-String strurl = "/co2temperatura/web/controlador/insertardatos.php";
+String strurl = "/co2-temperature/web/controlador/insertardatos.php";
 String chipid = "";
 
 //-------Función para Enviar Datos a la Base de Datos SQL--------
@@ -115,19 +115,13 @@ void loop() {
   unsigned long currentMillis = millis();
 
   if (currentMillis - previousMillis >= tiempoEnvio ) {
-    previousMillis = currentMillis;
-    //int analog = analogRead(0); //initializes/defines the output pin of the LM35 temperature sensor
-    //float temp = analog*0.322265625;
-    //Serial.println(temp);
+    previousMillis = currentMillis;  
     String co2 = "";
-    //int co2;
-
     int8_t temp;
-    temp = myMHZ19.getTemperature();                     // Request Temperature (as Celsius)
-    //Serial.print("Temperature (C): ");
-    //Serial.println(temp);
-
+    
+    temp = myMHZ19.getTemperature();                     // Request Temperature (as Celsius)    
     co2 = String(myMHZ19.getCO2());
+    
     enviardatos("chipid=" + chipid + "&co2=" + co2 + "&temp=" + temp);
   }
 }

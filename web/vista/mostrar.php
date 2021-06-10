@@ -2,9 +2,9 @@
 
 	require_once("../db/conectar.php");
 
-
-	$fecha1 = $_GET['f1'];
-	$fecha2 = $_GET['f2'];
+	//recoger parametros
+	$fecha1 = isset($_GET['f1']) ? $_GET['f1'] : null;
+	$fecha2 = isset($_GET['f2']) ? $_GET['f2'] : null;
 
 	$filtro = "Últimos Registros";
 	if ( !is_null($fecha1) )
@@ -18,11 +18,8 @@
 		$sql= "SELECT * FROM tabla ORDER BY id DESC LIMIT 500;";
 	}
 
-	// echo($sql);
-	$resultado = mysqli_query($conn, $sql);
-
-
-			
+	$stmt = $pdo->prepare($sql);
+	$stmt->execute();
 	
 ?>
 
@@ -42,7 +39,7 @@
   <body class="container">
 	<a href="../index.php" class="btn btn-outline-primary mb-4 mt-4">Volver</a>
   
-	<h3><span class="bg-secondary text-light p-1"><?php echo($resultado->num_rows)?></span> <?php echo($filtro)?></h3>
+	<h3><span class="bg-secondary text-light p-1"><?php echo($stmt->rowCount())?></span> <?php echo($filtro)?></h3>
 	
 
 	<!-- filtro fechas -->
@@ -86,7 +83,7 @@
 				<?php
 					
 					// variables para los graficos
-					$dataCount = $resultado->num_rows;
+					$dataCount = $stmt->rowCount();
 					$labelsTemp = [];
 					$dataTemp = [];
 					$cont = 0;
@@ -99,7 +96,7 @@
 					$co2Min = 100;
 					$co2Media = 0;
 					
-					while($row = mysqli_fetch_assoc($resultado)) {
+					while($row = $stmt->fetch()) {
 
 						// maximos, minimos y media
 						$tempMedia += $row['temp'];

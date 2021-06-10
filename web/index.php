@@ -1,21 +1,20 @@
 <?php
 
     require_once("db/conectar.php");
+	
+	$sql1 = "SELECT max(co2) 'maxco2', min(co2) 'minco2', avg(co2) 'avgco2', max(temp) 'maxtemp', min(temp) 'mintemp', avg(temp) 'avgtemp', date_format(fecha, '%Y-%m-%d'), CURRENT_DATE FROM tabla WHERE date_format(fecha, '%Y-%m-%d') = CURRENT_DATE GROUP BY date_format(fecha, '%Y-%m-%d');";
+	$sql2 = "SELECT co2, temp FROM tabla ORDER BY id DESC LIMIT 1;";
+	
+	$stmt1 = $pdo->prepare($sql1);
+	$stmt2 = $pdo->prepare($sql2);
 
- 
-	$sql= "SELECT max(co2) 'maxco2', min(co2) 'minco2', avg(co2) 'avgco2', max(temp) 'maxtemp', min(temp) 'mintemp', avg(temp) 'avgtemp', date_format(fecha, '%Y-%m-%d'), CURRENT_DATE FROM tabla WHERE date_format(fecha, '%Y-%m-%d') = CURRENT_DATE GROUP BY date_format(fecha, '%Y-%m-%d');";
-	$sql2= "SELECT co2, temp FROM tabla ORDER BY id DESC LIMIT 1;";
-	
-	$resultado = mysqli_query($conn, $sql);
-	$resultado2 = mysqli_query($conn, $sql2);
-	
-	$row = mysqli_fetch_assoc($resultado);
-	$row2 = mysqli_fetch_assoc($resultado2);
-	
-	//echo ($sql);
-	
+	$stmt1->execute();
+	$stmt2->execute();
+
+	$row = $stmt1->fetch();
+	$row2 = $stmt2->fetch();
+		
 ?>
-
 
 
 <!doctype html>
