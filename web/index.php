@@ -35,7 +35,7 @@
 	<div class="container">
 		
 		  <div class="card">        
-			<h3>Sensor XXXX<span>Aula 013</h3>
+			<h3>Sensor XXXX<span>Aula xxx</h3>
 			<h1><?php echo $row2['co2']?></h1>
 			<div class="sky">
 				<div class="co2">co2</div>

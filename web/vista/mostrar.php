@@ -200,7 +200,7 @@
 	<script>
 
 			const DATA_COUNT = <?php echo $dataCount?>;
-			const NUMBER_CFG = {count: DATA_COUNT, min: 0, max: 40};
+			const NUMBER_CFG = {count: DATA_COUNT, min: 10, max: 40};
 
 			const labels = <?php echo json_encode($labelsTemp)?>;
 			const data = {

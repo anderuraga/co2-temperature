@@ -1,6 +1,8 @@
 
 /* Nombre de la BBDD es 'sensores' */
 
+USE `sensores`;
+
 /* Solo existe una tabla para recoger los datos */
 
 CREATE TABLE `tabla` (
@@ -14,3 +16,5 @@ CREATE TABLE `tabla` (
 
 
 /* Ejecutar etas lineas si queremos datos de prueba */  
+
+INSERT INTO `tabla` (chipId, co2, temp) VALUES ('MOCK1', 600, 23), ('MOCK1', 600, 23),('MOCK1', 604, 22),('MOCK1', 630, 22),('MOCK1', 602, 25) ;
