@@ -3,6 +3,11 @@
 Proyecto Web y Arduino para recoger datos de Co2 y Temperatura de un Aula.
 Los datos son recogidos mediante un sensor X y enviados a un servidor web en apache para ser guardados en una bbdd mysql.
 Usamos una aplicación web para poder mostrar los datos recogidos. 
+Este proyecto esta desarrollado para el Instituto Elorrieta-Errekamari (Bilbao).
+Con la colaboracion de:
+
+- Jorge gonzalez 
+- Unai Perea
 
 ## Página de Incio
 
@@ -70,10 +75,6 @@ Antes de instalar el programa de arduino en el microprocesador, debemos cambiar 
 
 
 
-## Autores
 
-Jorge gonzalez 
-Ander Uraga
-Unai Perea
 
 
