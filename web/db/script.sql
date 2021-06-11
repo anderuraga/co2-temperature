@@ -10,9 +10,9 @@ CREATE TABLE `tabla` (
   `chipId` varchar(45) NOT NULL,
   `co2` float NOT NULL,
   `temp` float NOT NULL,
-  `fecha` timestamp GENERATED ALWAYS AS (current_timestamp()) VIRTUAL,
+  `fecha` timestamp NOT NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4
 
 
 /* Ejecutar etas lineas si queremos datos de prueba */  

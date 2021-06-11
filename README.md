@@ -51,7 +51,7 @@ Para cambiar las variables de conexion a la bbdd desde PHP hay que cambiar el si
 
 ## configuración Proyecto Web
 
-El proyecto web se debe instalar en un servidor Apache que soporte PHP 8.0.6, la carpeta de instalación dependera del servidor usado WAMP en **www** y XAMP **htdocs**, el nombre de la carpeta para instalar la App Web debe ser **c02-temperatura**
+El proyecto web se debe instalar en un servidor Apache que soporte PHP 8.0.6, la carpeta de instalación dependera del servidor usado WAMP en **www** y XAMP **htdocs**, el nombre de la carpeta para instalar la App Web debe ser **c02-temperature**
 
 Puedes probar que accede abriendo esta url en un navegador web [url pagina inicio](//localhost/co2-temperature/web/)
 
