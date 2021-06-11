@@ -8,14 +8,15 @@ Usamos una aplicación web para poder mostrar los datos recogidos.
 
 En la página principal podemos encontrar las últimas mediciones para el día actual, además de las mínimas, máximas y medias tanto de Co2 como Temperatura.
 
-![screenshot pagina inicio]( screenshot_home.jpg?raw=true )
+![screenshot pagina inicio]( https://raw.githubusercontent.com/anderuraga/co2-temperature/main/screenshot_home.JPG )
 
 ## Página con datos estadísticos
 
 Muestra datos estadísticos de los últimos 500 registros.
 Existe la posibilidad de filtrar por dos fechas.
 
-![screenshot pagina datos estadisiticos]( screenshot_datos.jpg?raw=true )
+![screenshot pagina datos estadisiticos]( https://raw.githubusercontent.com/anderuraga/co2-temperature/main/screenshot_datos.JPG )
+
 
 
 ## Técnologia
