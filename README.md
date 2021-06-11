@@ -27,7 +27,10 @@ Existe la posibilidad de filtrar por dos fechas.
 - JS
 - ARDUINO
 
+## Estructura de carpetas
 
+- arduino: script y documentacion
+- web: proyecto web + PHP + base datos
 
 ## configuración de la bbdd
 
@@ -67,7 +70,10 @@ Antes de instalar el programa de arduino en el microprocesador, debemos cambiar 
 
 
 
-## Estructura Clases del proyecto
+## Autores
 
+Jorge gonzalez 
+Ander Uraga
+Unai Perea
 
 
