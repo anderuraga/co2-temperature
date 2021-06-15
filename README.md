@@ -92,10 +92,12 @@ Imagen con ejemplo de busqueda de libreria
 ![screenshot buscador librerias Arduino]( https://raw.githubusercontent.com/anderuraga/co2-temperature/main/screenshot_arduino.jpg )
 
 ### Wemos D1 Mini con módulo ESP8266
-![placa arduino]( https://raw.githubusercontent.com/anderuraga/co2-temperature/main/screenshot_.jpg )
+![placa arduino]( https://raw.githubusercontent.com/anderuraga/co2-temperature/main/screenshot_ESP8266.jpg )
 
 ### MH-Z19B
-![sensor co2 y temp]( https://raw.githubusercontent.com/anderuraga/co2-temperature/main/screenshot_arduino.jpg )
+![sensor co2 y temp]( https://raw.githubusercontent.com/anderuraga/co2-temperature/main/screenshot_mh-z19B.jpg )
+
+### Diagrama de conexión
 
 
 
