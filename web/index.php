@@ -2,7 +2,9 @@
 
     require_once("db/conectar.php");
 	
+	// valores estidisticos para HOY
 	$sql1 = "SELECT max(co2) 'maxco2', min(co2) 'minco2', avg(co2) 'avgco2', max(temp) 'maxtemp', min(temp) 'mintemp', avg(temp) 'avgtemp', date_format(fecha, '%Y-%m-%d'), CURRENT_DATE FROM tabla WHERE date_format(fecha, '%Y-%m-%d') = CURRENT_DATE GROUP BY date_format(fecha, '%Y-%m-%d');";
+	// Ultimo registro
 	$sql2 = "SELECT co2, temp FROM tabla ORDER BY id DESC LIMIT 1;";
 	
 	$stmt1 = $pdo->prepare($sql1);
@@ -18,7 +20,7 @@
 
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -34,6 +36,7 @@
 		
 	<div class="container">
 		
+		<!-- card Co2 -->
 		  <div class="card">        
 			<h3>Sensor XXXX<span>Aula xxx</h3>
 			<h1><?php echo $row2['co2']?></h1>
@@ -58,8 +61,8 @@
 				</tr>            
 			</table>
 		</div>
-		<!-- card 1 -->
 		
+		<!-- card Temperatura -->
 		<div class="card">        
 			<h3>Sensor XXXX<span>Aula 013</h3>
 			<h1><?php echo $row2['temp']?>º</h1>
@@ -79,15 +82,10 @@
 				</tr>            
 			</table>
 		</div>
-        <!-- card 2 -->
+        
 		
 	</div>
     <!-- div.container -->
-		
-
-</table>
-
-    
    
   </body>
 </html>

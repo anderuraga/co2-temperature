@@ -2,7 +2,7 @@
 
 	require_once("../db/conectar.php");
 
-	//recoger parametros
+	//recoger parametros del formulario que tenemos mas abajo maquetado en HTML
 	$fecha1 = isset($_GET['f1']) ? $_GET['f1'] : null;
 	$fecha2 = isset($_GET['f2']) ? $_GET['f2'] : null;
 
@@ -13,7 +13,7 @@
 		$sql= "SELECT * FROM tabla WHERE fecha BETWEEN CAST('".$fecha1."' AS DATE) AND CAST('".$fecha2."' AS DATE) ORDER BY id DESC;";
 
 	}else {
-		$fecha1 = date("Y-m-d");
+		$fecha1 = date("Y-m-d"); // la fecha actual para pintarla en el input del formulario
 		$fecha2 = date("Y-m-d");
 		$sql= "SELECT * FROM tabla ORDER BY id DESC LIMIT 500;";
 	}
@@ -24,7 +24,7 @@
 ?>
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
