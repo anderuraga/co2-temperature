@@ -30,9 +30,9 @@ Existe la posibilidad de filtrar por dos fechas.
 - HTML
 - CSS
 - JS
-- bootstrap@5.0.1
-- DataTables
-- chart.js
+- [bootstrap@5.0.1](https://getbootstrap.com/)
+- [DataTables](https://datatables.net/)
+- [chart.js](https://www.chartjs.org/)
 - ARDUINO
 
 ## Estructura de carpetas
@@ -99,6 +99,7 @@ Imagen con ejemplo de busqueda de libreria
 
 ### Diagrama de conexión
 
+TODO
 
 
 
