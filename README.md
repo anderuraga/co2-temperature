@@ -9,7 +9,7 @@ Con la colaboracion de:
 - Jorge gonzalez 
 - Unai Perea
 
-## Página de Incio
+## Página de Inicio
 
 En la página principal podemos encontrar las últimas mediciones para el día actual, además de las mínimas, máximas y medias tanto de Co2 como Temperatura.
 
