@@ -99,8 +99,8 @@ Imagen con ejemplo de busqueda de libreria
 
 ### Diagrama de conexión
 
-TODO
 
+![sensor co2 y temp]( https://raw.githubusercontent.com/anderuraga/co2-temperature/main/screenshot_diagrama.jpg )
 
 
 
