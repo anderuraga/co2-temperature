@@ -76,6 +76,23 @@ Antes de instalar el programa de arduino en el microprocesador, debemos cambiar 
 
  ```
 
+### Importar Librerias desde el IDE de Arduino
+
+Para la instalación de librerias desde Arduino usar la siguiente opción de Menu:
+*Menú programa, incluir librería, administrar biblioteca, buscamos las siguientes 4 *
+
+`
+   #include <ESP8266WiFi.h>
+   #include <WiFiClient.h>
+   #include "MHZ19.h"
+   #include <SoftwareSerial.h>    
+`   
+
+Imagen con ejemplo de busqueda de libreria
+![screenshot buscador librerias Arduino]( https://raw.githubusercontent.com/anderuraga/co2-temperature/main/screenshot_arduino.JPG )
+
+
+
 
 
 
