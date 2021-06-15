@@ -89,7 +89,7 @@ Para la instalación de librerias desde Arduino usar la siguiente opción de Men
 `   
 
 Imagen con ejemplo de busqueda de libreria
-![screenshot buscador librerias Arduino]( https://raw.githubusercontent.com/anderuraga/co2-temperature/main/screenshot_arduino.JPG )
+![screenshot buscador librerias Arduino]( https://raw.githubusercontent.com/anderuraga/co2-temperature/main/screenshot_arduino.jpg )
 
 
 
