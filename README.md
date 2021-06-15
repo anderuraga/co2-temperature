@@ -1,7 +1,7 @@
 # Medidor de Co2 y Temperatura
 
 Proyecto Web y Arduino para recoger datos de Co2 y Temperatura de un Aula.
-Los datos son recogidos mediante un sensor X y enviados a un servidor web en apache para ser guardados en una bbdd mysql.
+Los datos son recogidos mediante un sensor **MH-Z19B** y placa **Wemos D1 Mini con módulo ESP8266(wifi)**  y enviados a un servidor web en apache para ser guardados en una bbdd mysql.
 Usamos una aplicación web para poder mostrar los datos recogidos. 
 Este proyecto esta desarrollado para el Instituto Elorrieta-Errekamari (Bilbao).
 Con la colaboracion de:
@@ -30,6 +30,9 @@ Existe la posibilidad de filtrar por dos fechas.
 - HTML
 - CSS
 - JS
+- bootstrap@5.0.1
+- DataTables
+- chart.js
 - ARDUINO
 
 ## Estructura de carpetas
